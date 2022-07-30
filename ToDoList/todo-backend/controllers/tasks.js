@@ -22,7 +22,8 @@ taskRouter.delete('/:id', async (request, response) => {
 taskRouter.put('/:id', async (request, response) => {
     let content = request.body
     const task = {
-        task: content.task
+        task: content.task,
+        priority: content.priority
     }
     let newTask = await Task.findByIdAndUpdate(request.params.id, task, { new: true})
     response.status(200).json(newTask)
