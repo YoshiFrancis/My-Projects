@@ -1,0 +1,21 @@
+GET http://localhost:3001/tasks
+
+###
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "task": "HEOWIHERUIJKR"
+}
+
+### 
+DELETE http://localhost:3001/tasks/62e4609661c793e631d426c2
+
+###
+PUT http://localhost:3001/tasks/62e45d0f6d7f8c66af5fa227
+Content-Type: application/json
+
+{
+    "task": "HEOWIHERUIJKR"
+}
