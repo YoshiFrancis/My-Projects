@@ -26,7 +26,7 @@ taskRouter.put('/:id', async (request, response) => {
         priority: content.priority
     }
     let newTask = await Task.findByIdAndUpdate(request.params.id, task, { new: true})
-    response.status(200).json(newTask)
+    response.status(201).json(newTask)
 })
 
 module.exports = taskRouter
